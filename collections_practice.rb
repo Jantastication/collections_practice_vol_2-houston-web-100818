@@ -41,13 +41,13 @@ end
 
 
 def find_cool(array)
-  answer = []
+  new_array = []
   cool.each do |item|
     item.each do |key, value|
-      answer << item if value == "cool"
+      new_array << item if value == "cool"
     end
   end
-  answer
+  new_array
 end
 
 def organize_schools(schools)
