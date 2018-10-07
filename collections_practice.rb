@@ -51,7 +51,7 @@ def find_cool(array)
 end
 
 def organize_schools(schools)
-  answer = Hash.new
+  answer = {}
   schools.each do |school, data|
     data.each do |key, value|
       if key == :location
