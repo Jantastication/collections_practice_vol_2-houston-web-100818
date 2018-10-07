@@ -23,7 +23,7 @@ def count_elements(array)
 end
 
 def merge_data(keys, data)
-  merged = Array.new
+  merged = []
   keys.each do |keys_person|
     keys_person.each do |keys_key, keys_value|
       data.each do |data_person|
