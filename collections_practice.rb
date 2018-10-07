@@ -60,4 +60,4 @@ def organize_schools(schools)
     end
   end
   answer
-end 
+end
