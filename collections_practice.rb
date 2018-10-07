@@ -23,8 +23,22 @@ def count_elements(array)
 end
 
 def merge_data(keys, data)
-
+  merged = Array.new
+  keys.each do |keys_person|
+    keys_person.each do |keys_key, keys_value|
+      data.each do |data_person|
+        data_person.each do |data_name, data_details|
+          if keys_value == data_name
+            data_person[data_name][keys_key] = keys_value
+            merged << data_details
+          end
+        end
+      end
+    end
+  end
+  merged
 end
+
 
 def find_cool(array)
   answer = []
@@ -35,3 +49,15 @@ def find_cool(array)
   end
   answer
 end
+
+def organize_schools(schools)
+  answer = Hash.new
+  schools.each do |school, data|
+    data.each do |key, value|
+      if key == :location
+        !answer.keys.include?(value) ? answer[value] = [school] : answer[value] << school
+      end
+    end
+  end
+  answer
+end 
