@@ -38,5 +38,3 @@ def find_cool(array)
   end
   answer
 end
-
-
