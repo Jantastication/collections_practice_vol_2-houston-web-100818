@@ -1,10 +1,8 @@
 # your code goes here
 def begins_with_r
-  if element.start_with?("r")
-    true
-  else
-    false
-  end
+  array.all? { |element| element.start_with? "r" }
+end
+
 end
 
 def contain_a(array)
@@ -12,17 +10,18 @@ def contain_a(array)
 end
 
 def first_wa(array)
-  array.find {|element| return if word.to_s.start_with?("wa")}
+  array.find {|element| element.to_s.start_with?("wa")}
 end
 
 def remove_non_strings(array)
-  array.delete_if {|element| element.class !=string}
+  array.delete_if {|element| element != element.to_s}
 end
 
 def count_elements(array)
-  array.uniq.collect do |item|
-    item[:count] = array.count(item)
-    item
+  array.uniq.collect do |element|
+    element[:count] = array.count(element)
+    element
+  end
 end
 
 def merge_data(keys, data)
@@ -37,5 +36,4 @@ def find_cool(array)
     end
   end
   answer
-end
 end
