@@ -23,20 +23,20 @@ def count_elements(array)
 end
 
 def merge_data(keys, data)
-  merged = []
+  new_array = []
   keys.each do |keys_person|
     keys_person.each do |keys_key, keys_value|
       data.each do |data_person|
         data_person.each do |data_name, data_details|
           if keys_value == data_name
             data_person[data_name][keys_key] = keys_value
-            merged << data_details
+            new_array << data_details
           end
         end
       end
     end
   end
-  merged
+  new_array
 end
 
 
