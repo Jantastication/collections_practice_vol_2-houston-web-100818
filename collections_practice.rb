@@ -1,5 +1,5 @@
 # your code goes here
-def begins_with_r
+def begins_with_r(array)
   array.all? { |element| element.start_with? "r" }
 end
 
